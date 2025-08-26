@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RGB K-Means Image Segmentation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>RGB K-Means Image Segmentation</h1>
+
+  <div id="controls">
+    <input type="file" id="fileInput" accept="image/*">
+
+    <label>K
+      <input type="number" id="kInput" min="1" value="3">
+    </label>
+
+    <button id="plotBtn">Plot RGB Cloud</button>
+    <button id="clusterBtn">Run K-Means</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <div id="layout">
+    <div id="images">
+      <div class="panel">
+        <h3>Original</h3>
+        <canvas id="origCanvas"></canvas>
+      </div>
+      <div class="panel">
+        <h3>Segmented</h3>
+        <canvas id="segCanvas"></canvas>
+      </div>
+    </div>
+
+    <div id="plotWrap">
+      <h3>RGB Color Cloud (R, G, B → X, Y, Z)</h3>
+      <canvas id="plotCanvas" width="600" height="600"></canvas>
+      <div id="plotControls">
+        <small>Rotate: drag / Touch rotate, Pinch to zoom, Two-finger drag to pan, Wheel to zoom</small>
+      </div>
+    </div>
+  </div>
+
+  <div id="log"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

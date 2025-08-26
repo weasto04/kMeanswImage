@@ -1,0 +1,16 @@
+:root{ --gap:12px; font-family: system-ui,Segoe UI,Roboto,Arial,Helvetica,sans-serif }
+body{ padding:20px; background:#f7f7fb; color:#111 }
+h1{ margin:0 0 12px }
+#controls{ display:flex; gap:var(--gap); align-items:center; margin-bottom:12px; flex-wrap:wrap }
+label{ display:flex; gap:6px; align-items:center }
+#layout{ display:flex; gap:20px }
+#images{ display:flex; flex-direction:column; gap:12px }
+.panel{ background: white; padding:8px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.06) }
+canvas{ background:#fff; display:block; max-width:100%; border:1px solid #eee }
+#plotWrap{ width:620px }
+#plotCanvas{ width:600px; height:600px; background:#111 }
+#plotControls{ margin-top:8px; display:flex; gap:8px; align-items:center }
+#plotCanvas{ touch-action: none; }
+#log{ margin-top:12px; font-size:13px; color:#333 }
+
+@media (max-width:900px){ #layout{ flex-direction:column } #plotWrap{ width:100% } }
